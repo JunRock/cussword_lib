@@ -1,0 +1,23 @@
+plugins {
+	id 'java-library'
+	id 'maven-publish'
+}
+
+java {
+	sourceCompatibility = '11'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+	google()
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
