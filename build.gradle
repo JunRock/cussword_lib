@@ -7,6 +7,18 @@ java {
 	sourceCompatibility = '11'
 }
 
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+
+			groupId = 'io.github.peaceingaza'
+			artifactId = 'filtering'
+			version = '0.0.1'
+		}
+	}
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
